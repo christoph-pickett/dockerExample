@@ -39,9 +39,9 @@ steps:
   uses: docker/build-push-action@v4
   with:
     context : ./
-    file: ./api/Dockerfile
+    file: ./Dockerfile
     push: true
-    tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mvc-structure:latest
+    tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-example:latest
   
   - name: Image digest
   run: echo ${{ steps.docker_build.outputs.digest }}
